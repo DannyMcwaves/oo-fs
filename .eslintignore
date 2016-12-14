@@ -1,0 +1,16 @@
+
+## ignore this files.
+.babelrc.json
+.eslintignore
+.gitignore
+
+
+## markdown files
+
+README.md
+CONTRIBUTING.md
+
+
+## folders
+/node_modules/*
+/bower_components/*
