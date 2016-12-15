@@ -1,0 +1,9 @@
+
+// This preset is uesed to compile our es6 code to es5:
+// You can use other presets based on your project type like react or es7 presets:
+
+{
+
+  "presets": ["es2015"]
+  
+}
