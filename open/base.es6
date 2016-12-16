@@ -6,6 +6,10 @@ let pathSymbol = Symbol("path"),
     fs = require("fs"),
     FSError = require("./error");
 
+
+// this is the base class providing almost all the major API'S for the rest of the other
+// classes avaiable in the package.
+
 class _BASE {
 
     constructor (pathname) {
@@ -14,6 +18,10 @@ class _BASE {
         this[pathSymbol] = pathname || process.cwd();
         this.dirname = path.dirname(this.pathname);
         this.basename = path.basename(this.pathname);
+        this.F_OK = 0;
+        this.X_OK = 1
+        this.R_OK = 4
+        this.W_OK = 2
     }
 
     get pathname() {
