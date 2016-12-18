@@ -4,13 +4,13 @@ let pathSymbol = Symbol("path"),
     path = require("path"),
     glob = require("glob"),
     fs = require("fs"),
-    FSError = require("./error");
+    FSError = require("./error.es6");
 
 
-// this is the base class providing almost all the major API'S for the rest of the other
-// classes avaiable in the package.
 
 class _BASE {
+    // this is the base class providing almost all the major API'S for the rest of the other
+    // classes avaiable in the package.
 
     constructor (pathname) {
 
