@@ -14,7 +14,7 @@ let fs-util = require("fs-util");
 - [x] Directory
 - [x] File
 - [x] FSError
-- [f] open
+- [x] open
 
 ## BASE
 this is the base class providing almost all the major API's for the rest of the other
