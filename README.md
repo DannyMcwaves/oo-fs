@@ -21,7 +21,9 @@ this is the base class providing almost all the major API's for the rest of the 
 classes available in the package. All the methods on this treated as properties.
 
 **`constructor(pathname)`**
+```
     call the constructor without a pathname parameter and it uses the current working directory.
+```
 
 **`dirname`** --> baseDirectory:String
     returns the base directory of this pathname
