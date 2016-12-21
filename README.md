@@ -137,6 +137,13 @@ It is nothing really important, just a custom error class that is thrown in the 
     dir.search("open")
 ```
 
+**`watch`** ---> filename:Promise
+```
+    returns a promise that resolves the name of the file modified in this directory.
+    dir.watch.then((file) => {console.log(file)}, undefined); Feature still under dev't ,
+    might not work properly.
+```
+
 
 ## File
 ###### File extends Base
@@ -184,18 +191,18 @@ It is nothing really important, just a custom error class that is thrown in the 
     file.rename("file.txt")[.then(whatever, whatever)]
 ```
 
-**`writeStream`**
+**`writeStream`** --> emits a write event
 ```
     returns a promise of a writable stream.
     returns a stream of the file for writing in a promise.
-    file.writeStream.then(whatever, whatever)
+    file.writeStream.write("what in the world")
 ```
 
-**`readStream`**
+**`readStream`** --> emits an event
 ```
     creates and returns a readStream from the current file.
     returns a stream of the file for reading in a promise.
-    file.readStream.then(whatever, whatever)
+    file.readStream.on("data", console.log(data))
 ```
 
 ## open
