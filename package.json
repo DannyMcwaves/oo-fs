@@ -1,5 +1,5 @@
 {
-  "name": "fs-util",
+  "name": "oo-fs",
   "version": "1.0.1",
   "description": "object oriented file handling with node.js",
   "main": "index.es6",
@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/DannyMcwaves/fs-util.git"
+    "url": "https://github.com/DannyMcwaves/oo-fs.git"
   },
   "keywords": [
     "fs",
@@ -33,6 +33,6 @@
     "folder",
     "file"
   ],
-  "author": "danny_mcwaves",
+  "author": "dannymcwaves",
   "license": "MIT"
 }
