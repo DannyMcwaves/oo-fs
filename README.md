@@ -1,8 +1,10 @@
 # FS - UTIL
 #### Object Oriented file handling with node.
 
+**`npm install oo-fs`**
+
 ```javascript
-let fs-util = require("fs-util");
+let fs-util = require("oo-fs");
 // fs-util is an object that contains Directory class, File class and open function.
 // fs-util = {Directory, File, open} -- es6 format.
 ```
@@ -213,10 +215,10 @@ It throws an error if the file path passed does not exist
 ## USAGE
 you needs to have a node runtime
 
-**`npm install fs-util`**
+**`npm install oo-fs`**
 
 ```javascript
-    let {Directory, File, open} = require("fs-util")
+    let {Directory, File, open} = require("oo-fs")
     let dir = new Directory("path-to-dir");
     let file = new File("path-to-file")
     let mypath = open("this-path-i-want-to-open")
