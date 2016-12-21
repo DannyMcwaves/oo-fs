@@ -77,18 +77,12 @@ class File extends Base {
 
     get writeStream() {
         // returns a promise of a writable stream.
-        return new Promise((resolve, reject) => {
-            resolve(fs.createWriteStream(this.pathname));
-        });
+        return fs.createWriteStream(this.pathname);
     }
 
     get readStream() {
         // creates and returns a readStream from the current file.
-        return new Promise((resolve, reject) => {
-            let rstream = fs.createReadStream(this.pathname);
-            rstream.setEncoding("utf-8");
-            resolve(rstream);
-        });
+        return fs.createReadStream(this.pathname);
     }
 
 }
