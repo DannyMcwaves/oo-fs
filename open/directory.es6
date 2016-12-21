@@ -3,7 +3,8 @@
 let Base = require("./base.es6"),
     FSError = require("./error.es6"),
     fs = require("fs"),
-    glob = require("glob");
+    glob = require("glob"),
+    watch = require("node-watch");
 
 
 class Directory extends Base {
@@ -109,6 +110,19 @@ class Directory extends Base {
         let list = glob.sync(this.join("**/*"));
         return list.filter((item) => {
             if (item.indexOf(value) > 0) return item;
+        });
+    }
+
+    get watch() {
+        // watch a directory and then it return the name of any file that has being modified.
+        watch(this.pathname, (filename) => {
+            return new Promise((resolve, reject) => {
+                if (filename) {
+                    resolve(filename);
+                } else {
+                    reject("No file modified");
+                }
+            });
         });
     }
 
